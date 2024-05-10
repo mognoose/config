@@ -1,0 +1,89 @@
+#command=/usr/share/i3blocks/$BLOCK_NAME
+command=$HOME/.scripts/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[apt.sh]
+interval=3600
+
+[np.sh]
+interval=1
+
+# [spotify-previous]
+# command=sh /home/$USER/.scripts/spotctrl.sh previous
+# interval=1
+
+# [spotify-play-pause]
+# command=sh /home/$USER/.scripts/spotctrl.sh play-pause
+# interval=1
+
+# [spotify-next]
+# command=sh /home/$USER/.scripts/spotctrl.sh next
+# interval=1
+
+[volume]
+instance=Master
+interval=1
+signal=10
+
+[cpu_hidden]
+label=
+interval=10
+
+[memory]
+label=
+separator=true
+interval=1
+#command=free -m | awk 'NR==2{printf "%.0f%", ($3)/($2)*100 }'
+command=$HOME/.scripts/memory.sh
+
+#[disk]
+#label=
+#interval=30
+#command=df | awk 'NR==4{printf "%.1f%", $3/$2*100}'
+#command=df | awk 'NR==4{printf "%.0f%", $5}'
+
+#[speed]
+#label=
+#interval=600
+#command=sh /home/$USER/.scripts/speedtest.sh
+
+[battery]
+label=
+interval=1
+command=$HOME/.scripts/battery.sh
+
+[ssid]
+label=
+command=/home/$USER/.scripts/ssid
+interval=5
+
+#[nm-vpn]
+#label=
+#interval=5
+#command=sh /home/$USER/.scripts/vpn.sh
+
+[weather]
+instance=2643743
+interval=60
+command=/home/$USER/.scripts/weather
+
+[dnd]
+command=/home/$USER/.scripts/dnd.sh
+interval=1
+
+#DATE
+[time]
+command=date '+%e.%-m.%Y'
+#command=date '+%e.%m %^a %V'
+interval=1
+
+#WEEKNUMBER
+#[time]
+#command=date '+%-V'
+#interval=1
+
+#CLOCK
+[time]
+command=date '+%^a %k:%M  '
+interval=1
