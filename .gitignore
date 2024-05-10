@@ -9,5 +9,10 @@
 !picom
 !ranger
 !rofi
-!README.md
-!.gitignore
+
+.gsd-keyboard.settings-ported
+.QtProject.conf
+mimeapps.list
+pavucontrol.ini
+user-dirs.dirs
+user-dirs.locale
